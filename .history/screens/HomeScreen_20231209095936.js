@@ -1,11 +1,9 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { auth } from './firebase'
-import { useNavigation } from '@react-navigation/native'
 
 
 const HomeScreen = () => {
-  const navigation = useNavigation()
 
   const handleSignOut = () => {
     auth
@@ -13,14 +11,13 @@ const HomeScreen = () => {
     .then(() => {
       navigation.replace("Login")
     })
-    .catch(error => alert(error.message))
+    .catch(error => alert(error.mes))
   }
 
   return (
     <View style={styles.container}>
       <Text>Email {auth.currentUser?.email}</Text>
       <TouchableOpacity
-      onPress={handleSignOut}
       style={styles.button}
       >
         <Text style={styles.buttonText}>Sign out</Text>

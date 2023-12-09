@@ -20,7 +20,7 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Text>Email {auth.currentUser?.email}</Text>
       <TouchableOpacity
-      onPress={handleSignOut}
+      onPress={}
       style={styles.button}
       >
         <Text style={styles.buttonText}>Sign out</Text>

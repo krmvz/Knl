@@ -1,27 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { KeyboardAvoidingView } from 'react-native';
 import { TextInput } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { auth } from './firebase';
 import {AsyncStorage} from "react-native"
-import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const navigation = useNavigation();
-
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(user => {
-            if(user){
-                navigation.replace("Home")
-            }
-        })
-
-        return unsubscribe;
-    }, [])
+    userEf
 
     const handleSignUp = () => {
         auth
