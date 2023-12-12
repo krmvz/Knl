@@ -25,7 +25,7 @@ const HomeScreen = () => {
   </View>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
 </View>
-<Button>User Page</Button>
+<Button> User Page</>
 <View
   style={{
     borderBottomColor: 'black',

@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 // import { auth } from 'firebase'
 import { useNavigation } from '@react-navigation/native'
@@ -25,7 +25,7 @@ const HomeScreen = () => {
   </View>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
 </View>
-<Button>User Page</Button>
+<Text> User Page </Text>
 <View
   style={{
     borderBottomColor: 'black',
