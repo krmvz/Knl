@@ -23,8 +23,8 @@ const LoginScreen = () => {
     //     return unsubscribe;
     // }, [])
 
-    // const handleSignUp = () => {
-    //     console.log('registred')
+    const handleSignUp = () => {
+        console.log('registred')
     //     auth
     //     .createUserWithEmailAndPassword(email, password)
     //     .thend(userCredentials => {
@@ -44,12 +44,11 @@ const LoginScreen = () => {
     //     .catch(error => alert(error.message))
     // }
     const handleLogin = () => {
-        navigation.navigate("Home");
-        // if(email =="a@gmail.com" && password == "123456"){
-        //     navigation.navigate("Home");
-        // }else{
-        //     console.log("error")
-        // }
+        if(email ==="a@gmail.com" && password === "123456"){
+            console.log(email)
+        }else{
+            console.log("error")
+        }
     }
 
   return (
@@ -59,7 +58,7 @@ const LoginScreen = () => {
     >
       <View style={styles.inputContainer}>
         <TextInput
-            placeholder='Email'
+            placeholder='Email emes'
             value={email}
             onChangeText={text => setEmail(text) }
             style={styles.input}
@@ -80,7 +79,7 @@ const LoginScreen = () => {
             <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
-        onPress={() => navigation.navigate("Register")}
+        onPress={handleSignUp}
         style={[styles.button, styles.buttonOutline]}
         >
             <Text style={styles.buttonOutlineText}>Register</Text>

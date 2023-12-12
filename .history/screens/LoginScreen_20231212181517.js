@@ -44,7 +44,6 @@ const LoginScreen = () => {
     //     .catch(error => alert(error.message))
     // }
     const handleLogin = () => {
-        navigation.navigate("Home");
         // if(email =="a@gmail.com" && password == "123456"){
         //     navigation.navigate("Home");
         // }else{
@@ -80,7 +79,7 @@ const LoginScreen = () => {
             <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
-        onPress={() => navigation.navigate("Register")}
+        // onPress={handleSignUp}
         style={[styles.button, styles.buttonOutline]}
         >
             <Text style={styles.buttonOutlineText}>Register</Text>

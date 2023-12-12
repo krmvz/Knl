@@ -80,7 +80,7 @@ const LoginScreen = () => {
             <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
-        onPress={() => navigation.navigate("Register")}
+        onPress={() => navigation.navigate("Home")}
         style={[styles.button, styles.buttonOutline]}
         >
             <Text style={styles.buttonOutlineText}>Register</Text>

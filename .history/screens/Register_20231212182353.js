@@ -1,57 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React, { useEffect, useState } from 'react';
-import { KeyboardAvoidingView } from 'react-native';
-import { TextInput } from 'react-native';
-import { TouchableOpacity } from 'react-native';
-// import { auth } from './firebase';
-// import {AsyncStorage} from "react-native"
-import { useNavigation } from '@react-navigation/native';
+import React from 'react'
+import { Text } from 'react-native'
 
-const LoginScreen = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const navigation = useNavigation();
-
-    // useEffect(() => {
-    //     const unsubscribe = auth.onAuthStateChanged(user => {
-    //         if(user){
-    //             navigation.replace("Home")
-    //         }
-    //     })
-
-    //     return unsubscribe;
-    // }, [])
-
-    // const handleSignUp = () => {
-    //     console.log('registred')
-    //     auth
-    //     .createUserWithEmailAndPassword(email, password)
-    //     .thend(userCredentials => {
-    //         const user = userCredentials.user;
-    //         console.log('Registred with:', user.email);
-    //     })
-    //     .catch(error => alert(error.message))
-    // }
-
-    // const handleLogin = () => {
-    //     auth
-    //     .signInWithEmailAndPassword(email, password)
-    //     .then(userCredentials => {
-    //         const user = userCredentials.user;
-    //         console.log('Logged in with:', user.email);
-    //     })
-    //     .catch(error => alert(error.message))
-    // }
-    const handleLogin = () => {
-        navigation.navigate("Home");
-        // if(email =="a@gmail.com" && password == "123456"){
-        //     navigation.navigate("Home");
-        // }else{
-        //     console.log("error")
-        // }
-    }
-
+const Register = () => {
   return (
     <KeyboardAvoidingView
     style={styles.container}
@@ -87,12 +37,13 @@ const LoginScreen = () => {
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
+ 
   )
 }
 
-export default LoginScreen
+export default Register;
 
-const styles = StyleSheet.create({
+const styles = StyleShe.create({
     container:{
         flex: 1,
         justifyContent: 'center',
