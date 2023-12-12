@@ -26,12 +26,6 @@ const HomeScreen = () => {
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
 </View>
 <Text>User Page</Text>
-<View
-  style={{
-    borderBottomColor: 'black',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  }}
-/>
     </View>
   )
 }

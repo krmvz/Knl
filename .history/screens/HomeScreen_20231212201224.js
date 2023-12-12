@@ -17,21 +17,15 @@ const HomeScreen = () => {
   // }
 
   return (
-    <View>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
-  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-  <View>
-    <Text style={{width: 50, textAlign: 'center'}}>Good luck!</Text>
-  </View>
-  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-</View>
-<Text>User Page</Text>
-<View
+    <View style={styles.container}>
+      <View
   style={{
     borderBottomColor: 'black',
     borderBottomWidth: StyleSheet.hairlineWidth,
   }}
 />
+      <Text>Email </Text>
+
     </View>
   )
 }
@@ -42,7 +36,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignContent: 'center',
+    // alignContent: 'center',
   },
   button: {
     backgroundColor: '#0782F9',

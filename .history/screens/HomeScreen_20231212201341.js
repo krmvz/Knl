@@ -17,22 +17,14 @@ const HomeScreen = () => {
   // }
 
   return (
-    <View>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+      <Text>h</Text>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
   <View>
     <Text style={{width: 50, textAlign: 'center'}}>Good luck!</Text>
   </View>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
 </View>
-<Text>User Page</Text>
-<View
-  style={{
-    borderBottomColor: 'black',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  }}
-/>
-    </View>
   )
 }
 
