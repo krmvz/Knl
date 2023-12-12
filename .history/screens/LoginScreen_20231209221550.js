@@ -4,7 +4,7 @@ import { KeyboardAvoidingView } from 'react-native';
 import { TextInput } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 // import { auth } from './firebase';
-// import {AsyncStorage} from "react-native"
+import {AsyncStorage} from "react-native"
 import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
@@ -58,7 +58,7 @@ const LoginScreen = () => {
     >
       <View style={styles.inputContainer}>
         <TextInput
-            placeholder='Email emes'
+            placeholder='Email'
             value={email}
             onChangeText={text => setEmail(text) }
             style={styles.input}

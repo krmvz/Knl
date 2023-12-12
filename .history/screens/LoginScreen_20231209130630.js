@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { KeyboardAvoidingView } from 'react-native';
 import { TextInput } from 'react-native';
 import { TouchableOpacity } from 'react-native';
-// import { auth } from './firebase';
-// import {AsyncStorage} from "react-native"
+import { auth } from './firebase';
+import {AsyncStorage} from "react-native"
 import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
@@ -13,43 +13,36 @@ const LoginScreen = () => {
 
     const navigation = useNavigation();
 
-    // useEffect(() => {
-    //     const unsubscribe = auth.onAuthStateChanged(user => {
-    //         if(user){
-    //             navigation.replace("Home")
-    //         }
-    //     })
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            if(user){
+                navigation.replace("Home")
+            }
+        })
 
-    //     return unsubscribe;
-    // }, [])
+        return unsubscribe;
+    }, [])
 
     const handleSignUp = () => {
-        console.log('registred')
-    //     auth
-    //     .createUserWithEmailAndPassword(email, password)
-    //     .thend(userCredentials => {
-    //         const user = userCredentials.user;
-    //         console.log('Registred with:', user.email);
-    //     })
-    //     .catch(error => alert(error.message))
+        auth
+        .createUserWithEmailAndPassword(email, password)
+        .thend(userCredentials => {
+            const user = userCredentials.user;
+            console.log('Registred with:', user.email);
+        })
+        .catch(error => alert(error.message))
     }
 
-    // const handleLogin = () => {
-    //     auth
-    //     .signInWithEmailAndPassword(email, password)
-    //     .then(userCredentials => {
-    //         const user = userCredentials.user;
-    //         console.log('Logged in with:', user.email);
-    //     })
-    //     .catch(error => alert(error.message))
-    // }
     const handleLogin = () => {
-        if(email ==="a@gmail.com" && password === "123456"){
-            console.log(email)
-        }else{
-            console.log("error")
-        }
+        auth
+        .signInWithEmailAndPassword(email, password)
+        .then(userCredentials => {
+            const user = userCredentials.user;
+            console.log('Logged in with:', user.email);
+        })
+        .catch(error => alert(error.message))
     }
+    C
 
   return (
     <KeyboardAvoidingView
@@ -58,7 +51,7 @@ const LoginScreen = () => {
     >
       <View style={styles.inputContainer}>
         <TextInput
-            placeholder='Email emes'
+            placeholder='Email'
             value={email}
             onChangeText={text => setEmail(text) }
             style={styles.input}

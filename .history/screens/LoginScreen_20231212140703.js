@@ -44,6 +44,12 @@ const LoginScreen = () => {
     //     .catch(error => alert(error.message))
     // }
     const handleLogin = () => {
+        auth
+        .signOut()
+        .then(() => {
+          navigation.replace("Login")
+        })
+        .catch(error => alert(error.message))
         if(email ==="a@gmail.com" && password === "123456"){
             console.log(email)
         }else{
@@ -58,7 +64,7 @@ const LoginScreen = () => {
     >
       <View style={styles.inputContainer}>
         <TextInput
-            placeholder='Email emes'
+            placeholder='Email'
             value={email}
             onChangeText={text => setEmail(text) }
             style={styles.input}

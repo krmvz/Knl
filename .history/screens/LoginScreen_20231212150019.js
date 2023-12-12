@@ -7,7 +7,7 @@ import { TouchableOpacity } from 'react-native';
 // import {AsyncStorage} from "react-native"
 import { useNavigation } from '@react-navigation/native';
 
-const LoginScreen = () => {
+const LoginScreen = ({nav}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -44,6 +44,7 @@ const LoginScreen = () => {
     //     .catch(error => alert(error.message))
     // }
     const handleLogin = () => {
+        navigation.replace("Home");
         if(email ==="a@gmail.com" && password === "123456"){
             console.log(email)
         }else{
@@ -58,7 +59,7 @@ const LoginScreen = () => {
     >
       <View style={styles.inputContainer}>
         <TextInput
-            placeholder='Email emes'
+            placeholder='Email'
             value={email}
             onChangeText={text => setEmail(text) }
             style={styles.input}
@@ -73,7 +74,7 @@ const LoginScreen = () => {
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
-        onPress={handleLogin}
+        onPress={() => navigation.navigate("Home")}
         style={styles.button}
         >
             <Text style={styles.buttonText}>Login</Text>

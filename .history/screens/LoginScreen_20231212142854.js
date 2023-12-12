@@ -6,8 +6,9 @@ import { TouchableOpacity } from 'react-native';
 // import { auth } from './firebase';
 // import {AsyncStorage} from "react-native"
 import { useNavigation } from '@react-navigation/native';
+import { Button } from 'react-native-material-design';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -43,7 +44,11 @@ const LoginScreen = () => {
     //     })
     //     .catch(error => alert(error.message))
     // }
+    const btn = () => {
+        alert("works!");
+    }
     const handleLogin = () => {
+        navigation.replace("Home");
         if(email ==="a@gmail.com" && password === "123456"){
             console.log(email)
         }else{
@@ -58,7 +63,7 @@ const LoginScreen = () => {
     >
       <View style={styles.inputContainer}>
         <TextInput
-            placeholder='Email emes'
+            placeholder='Email'
             value={email}
             onChangeText={text => setEmail(text) }
             style={styles.input}
@@ -73,7 +78,7 @@ const LoginScreen = () => {
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
-        onPress={handleLogin}
+        onPress={() => navigation.navigate("Home")}
         style={styles.button}
         >
             <Text style={styles.buttonText}>Login</Text>
@@ -83,6 +88,7 @@ const LoginScreen = () => {
         style={[styles.button, styles.buttonOutline]}
         >
             <Text style={styles.buttonOutlineText}>Register</Text>
+            <Button title= onPress={btn}/>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
