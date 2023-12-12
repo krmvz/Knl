@@ -25,7 +25,7 @@ const HomeScreen = () => {
   </View>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
 </View>
-<Button title='User Page' onPress={() => navigation.navigate("UserPage")}></Button>
+<Button onPress={() => navigation.navigate("UserPage")}>User Page</Button>
 <View
   style={{
     borderBottomColor: 'black',

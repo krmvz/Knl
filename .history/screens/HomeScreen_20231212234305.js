@@ -21,11 +21,11 @@ const HomeScreen = () => {
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
   <View>
-    <Text style={{width: 50, textAlign: 'center'}}>Good luck! bomj</Text>
+    <Text style={{width: 50, textAlign: 'center'}}>Good luck!</Text>
   </View>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
 </View>
-<Button title='User Page' onPress={() => navigation.navigate("UserPage")}></Button>
+<Button onPress={() => navigation.navigate("UserPage")}>User Page</Button>
 <View
   style={{
     borderBottomColor: 'black',

@@ -6,7 +6,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import Register from './screens/Register';
+
 import Profile from './screens/Profile';
+import Profile from './screens/profile';
+// >>>>>>> 8c78e314aa76f3d07918abc0a07127729e00eabc
  
 
 const Stack = createNativeStackNavigator();
