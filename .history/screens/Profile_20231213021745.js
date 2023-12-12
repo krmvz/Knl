@@ -8,7 +8,7 @@ const Profile = () => {
                 source = {
                     { uri: 'https://placekitten.com/200/200' } }/> 
             <Text style = { styles.name }> John Doe </Text> 
-            <Text style = { styles.bio }> Passionate Developer </Text> 
+            <Text style = { styles.bio } > Passionate Developer </Text> 
         </View>
     );
 };
