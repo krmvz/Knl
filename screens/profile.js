@@ -10,7 +10,7 @@ const Profile = () => {
             { uri: 'https://placekitten.com/200/200' }
         }
         /> 
-        <Text style = { styles.name } > John Doe </Text> 
+        <Text style = { styles.name } > Admin Admin </Text> 
         <Text style = { styles.major } > Computer Science </Text> 
         </View >
 
@@ -19,8 +19,11 @@ const Profile = () => {
         <Text style = { styles.label } > University: </Text> 
         <Text style = { styles.value } > Ala-Too International University </Text>
 
-        <Text style = { styles.label } > Batch: </Text> 
-        <Text style = { styles.value } > 2023 </Text>
+        <Text style = { styles.label } > Balance(2023-2024): </Text> 
+        <Text style = { styles.value } > 500$ </Text>
+
+        <Text style = { styles.label } > Email</Text>
+        <Text style = { styles.value } > a@gmail.com</Text>
 
         <Text style = { styles.label } > GPA: </Text> 
         <Text style = { styles.value } > 3.25 </Text> 

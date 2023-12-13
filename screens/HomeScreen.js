@@ -26,20 +26,13 @@ const HomeScreen = () => {
   </View>
   <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
 </View>
-{/* <View
-  style={{
-    borderBottomColor: 'black',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  }}
-/> */}
 <View style={styles.cardContainer}>
 
 {/* Link */}
 <TouchableOpacity
   style={styles.linkContainer}
-  onPress={() => { /* Handle navigation to course page */ }}
+  onPress={() => { navigation.navigate("Mobile App") }}
 >
-  {/* Card Image */}
   <Image
     style={styles.cardImage}
     source={{ uri: 'https://ocs.alatoo.edu.kg/pluginfile.php/12816/course/overviewfiles/th.jpg' }}
@@ -52,7 +45,7 @@ const HomeScreen = () => {
   <View style={styles.courseInfo}>
     <TouchableOpacity
       style={styles.courseLink}
-      onPress={() => { /* Handle navigation to course page */ }}
+      onPress={() => { navigation.navigate("Mobile App")}}
     >
       <View style={styles.favoriteIcon}>
         <Text>☆</Text>
@@ -65,7 +58,7 @@ const HomeScreen = () => {
 <View style={styles.cardBody}>
 <TouchableOpacity
   style={styles.linkContainer}
-  onPress={() => { /* Handle navigation to course page */ }}
+  onPress={() => { navigation.navigate("Mobile App")}}
 >
   {/* Card Image */}
   <Image
@@ -89,29 +82,6 @@ const HomeScreen = () => {
 </View>
 <View style={styles.cardBody}>
 
-<TouchableOpacity
-  style={styles.linkContainer}
-  onPress={() => { /* Handle navigation to course page */ }}
->
-  {/* Card Image */}
-  <Image
-    style={styles.cardImage}
-    source={{ uri: 'https://ocs.alatoo.edu.kg/pluginfile.php/12816/course/overviewfiles/th.jpg' }}
-  />
-  <Text style={styles.srOnly}>COM 319, COM 320, COM 420: Internships</Text>
-</TouchableOpacity>
-  <View style={styles.courseInfo}>
-    <TouchableOpacity
-      style={styles.courseLink}
-      onPress={() => { /* Handle navigation to course page */ }}
-    >
-      <View style={styles.favoriteIcon}>
-        <Text>☆</Text>
-      </View>
-      <Text style={styles.courseName}>COM 319, COM 320, COM 420: Java for fist year students</Text>
-    </TouchableOpacity>
-    <Text style={styles.courseCategory}>Computer Science</Text>
-  </View>
 </View>
 </View>
     </View>
