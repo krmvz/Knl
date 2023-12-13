@@ -2,40 +2,35 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const Profile = () => {
-    return ( <
-        View style = { styles.container } > { /* Header with Profile Picture */ } <
-        View style = { styles.header } >
-        <
-        Image style = { styles.profileImage }
+    return (
+        <View style = { styles.container } > 
+        <View style = { styles.header } >
+        <Image style = { styles.profileImage }
         source = {
             { uri: 'https://placekitten.com/200/200' }
-        } // Replace with the URL of your profile picture
-        /> <
-        Text style = { styles.name } > John Doe < /Text> <
-        Text style = { styles.major } > Computer Science Major < /Text> < /
-        View >
+        }
+        /> 
+        <Text style = { styles.name } > John Doe </Text> 
+        <Text style = { styles.major } > Computer Science </Text> 
+        </View >
 
-        { /* Student Information */ } <
-        View style = { styles.studentInfo } >
-        <
-        Text style = { styles.label } > University: < /Text> <
-        Text style = { styles.value } > Awesome University < /Text>
+       
+        <View style = { styles.studentInfo } >
+        <Text style = { styles.label } > University: </Text> 
+        <Text style = { styles.value } > Ala-Too International University </Text>
 
-        <
-        Text style = { styles.label } > Batch: < /Text> <
-        Text style = { styles.value } > 2023 < /Text>
+        <Text style = { styles.label } > Batch: </Text> 
+        <Text style = { styles.value } > 2023 </Text>
 
-        <
-        Text style = { styles.label } > GPA: < /Text> <
-        Text style = { styles.value } > 3.8 < /Text> < /
-        View >
+        <Text style = { styles.label } > GPA: </Text> 
+        <Text style = { styles.value } > 3.25 </Text> 
+        </View >
 
-        { /* Edit Profile Button */ } <
-        TouchableOpacity style = { styles.editButton } >
-        <
-        Text style = { styles.editButtonText } > Edit Profile < /Text> < /
-        TouchableOpacity > <
-        /View>
+      
+        <TouchableOpacity style = { styles.editButton } >
+        <Text style = { styles.editButtonText } > Edit Profile </Text> 
+        </TouchableOpacity > 
+        </View>
     );
 };
 
