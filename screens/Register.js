@@ -30,6 +30,13 @@ const Register = () => {
             style={styles.input}
             secureTextEntry
         />
+        <TextInput
+            placeholder='Re-Write Password'
+            value={password }
+            onChangeText={text => setPassword(text)}
+            style={styles.input}
+            secureTextEntry
+        />
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
