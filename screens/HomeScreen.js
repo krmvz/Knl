@@ -1,130 +1,118 @@
-import { Button, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
-// import { auth } from 'firebase'
-import { useNavigation } from '@react-navigation/native'
-
+import React from 'react';
+import { ScrollView, View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { FontAwesome } from '@expo/vector-icons';
 
 const HomeScreen = () => {
-  const navigation = useNavigation()
-
-  // const handleSignOut = () => {
-  //   auth
-  //   .signOut()
-  //   .then(() => {
-  //     navigation.replace("Login")
-  //   })
-  //   .catch(error => alert(error.message))
-  // }
+  const navigation = useNavigation();
 
   return (
-    <View style={styles.bg}>
-      <Button title='User Page' onPress={() => navigation.navigate("UserPage")}></Button>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
-  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-  <View>
-    <Text style={{width: 100, textAlign: 'center'}}>Welcome back</Text>
-  </View>
-  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-</View>
-<View style={styles.cardContainer}>
+    <ScrollView contentContainerStyle={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate("UserPage")} style={styles.button}>
+        <Text style={styles.buttonText}>User Page</Text>
+      </TouchableOpacity>
 
-{/* Link */}
-<TouchableOpacity
-  style={styles.linkContainer}
-  onPress={() => { navigation.navigate("Mobile App") }}
->
-  <Image
-    style={styles.cardImage}
-    source={{ uri: 'https://ocs.alatoo.edu.kg/pluginfile.php/12816/course/overviewfiles/th.jpg' }}
-  />
-  <Text style={styles.srOnly}>COM 319, COM 320, COM 420: Internships</Text>
-</TouchableOpacity>
+      <View style={styles.divider} />
 
-<View style={styles.cardBody}>
-
-  <View style={styles.courseInfo}>
-    <TouchableOpacity
-      style={styles.courseLink}
-      onPress={() => { navigation.navigate("Mobile App")}}
-    >
-      <View style={styles.favoriteIcon}>
-        <Text>☆</Text>
+      <View style={styles.welcomeContainer}>
+        <Text style={styles.welcomeText}>Welcome back</Text>
       </View>
-      <Text style={styles.courseName}>COM 319, COM 320, COM 420: Mobile app</Text>
-    </TouchableOpacity>
-    <Text style={styles.courseCategory}>Computer Science</Text>
-  </View>
-</View>
-<View style={styles.cardBody}>
-<TouchableOpacity
-  style={styles.linkContainer}
-  onPress={() => { navigation.navigate("Mobile App")}}
->
-  {/* Card Image */}
-  <Image
-    style={styles.cardImage}
-    source={{ uri: 'https://ocs.alatoo.edu.kg/pluginfile.php/12816/course/overviewfiles/th.jpg' }}
-  />
-  <Text style={styles.srOnly}>COM 319, COM 320, COM 420: Internships</Text>
-</TouchableOpacity>
-  <View style={styles.courseInfo}>
-    <TouchableOpacity
-      style={styles.courseLink}
-      onPress={() => { /* Handle navigation to course page */ }}
-    >
-      <View style={styles.favoriteIcon}>
-        <Text>☆</Text>
+
+      <View style={styles.cardContainer}>
+        {/* Card 1 */}
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => navigation.navigate("Mobile App")}
+        >
+          <Image
+            style={styles.cardImage}
+            source={{ uri: 'https://www.baypmtech.com/wp-content/uploads/2021/04/istock-131404860final.gif' }}
+          />
+          <Text style={styles.srOnly}>COM 319, COM 320, COM 420: Internships</Text>
+
+          <View style={styles.cardBody}>
+            <View style={styles.courseInfo}>
+              <View style={styles.favoriteIcon}>
+                <FontAwesome name="star" size={18} color="gold" />
+              </View>
+              <Text style={styles.courseName}>COM 319, COM 320, COM 420: Mobile App</Text>
+            </View>
+            <Text style={styles.courseCategory}>Computer Science</Text>
+          </View>
+        </TouchableOpacity>
+
+        {/* Card 2 */}
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => navigation.navigate("Python OOP")}
+        >
+          <Image
+            style={styles.cardImage}
+            source={{ uri: 'https://editor.analyticsvidhya.com/uploads/50548logo.png' }}
+          />
+          <Text style={styles.srOnly}>COM 319, COM 320, COM 420: Internships</Text>
+
+          <View style={styles.cardBody}>
+            <View style={styles.courseInfo}>
+              <View style={styles.favoriteIcon}>
+                <FontAwesome name="star" size={18} color="gold" />
+              </View>
+              <Text style={styles.courseName}>COM 319, COM 320, COM 420: Python OOP</Text>
+            </View>
+            <Text style={styles.courseCategory}>Computer Science</Text>
+          </View>
+        </TouchableOpacity>
+
+        {/* Add more cards as needed */}
       </View>
-      <Text style={styles.courseName}>COM 319, COM 320, COM 420:Python OOP</Text>
-    </TouchableOpacity>
-    <Text style={styles.courseCategory}>Computer Science</Text>
-  </View>
-</View>
-<View style={styles.cardBody}>
-
-</View>
-</View>
-    </View>
-  )
-}
-
-export default HomeScreen
+    </ScrollView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignContent: 'center',
-
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    margin: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  bg: {
-    backgroundColor: '#deb887',
+    padding: 16,
+    backgroundColor: '#f5f5f5', // Background color for the entire screen
+    flexDirection: 'column', // Display cards in a column
+    justifyContent: 'space-between',
   },
   button: {
-    backgroundColor: '#0782F9',
-    width: '60%',
+    backgroundColor: '#3498db',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
-    marginTop: 40,
+    marginVertical: 20,
   },
   buttonText: {
-      color: 'white',
-      fontWeight: '700',
-      fontSize: 16,
+    color: 'white',
+    fontWeight: '700',
+    fontSize: 16,
   },
-  linkContainer: {
+  divider: {
+    borderBottomColor: '#ccc',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    marginVertical: 10,
+  },
+  welcomeContainer: {
+    alignItems: 'center',
+    marginVertical: 10,
+  },
+  welcomeText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  cardContainer: {
+    flexDirection: 'column', // Display cards in a column
+    marginBottom: 20, // Add margin to the entire column
+  },
+  card: {
+    borderRadius: 10,
     overflow: 'hidden',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
+    backgroundColor: '#fff',
+    marginBottom: 10, // Add margin between cards
+    elevation: 3,
   },
   cardImage: {
     height: 150,
@@ -139,36 +127,28 @@ const styles = StyleSheet.create({
     margin: -1,
     padding: 0,
     overflow: 'hidden',
-    // clip: 'rect(0, 0, 0, 0)',
     borderWidth: 0,
   },
   cardBody: {
-    marginBottom:45,
     padding: 15,
-    backgroundColor: '#f0ffff',
-    // marginRight: 15,
   },
   courseInfo: {
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-  },
-  courseLink: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 8,
   },
   favoriteIcon: {
     marginRight: 5,
-    fontSize: 18,
-    color: 'gold', // Change the color to your preferred choice
   },
   courseName: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
     color: '#333',
   },
   courseCategory: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#555',
-    marginTop: 5,
   },
-})
+});
+
+export default HomeScreen;

@@ -8,6 +8,7 @@ import HomeScreen from './screens/HomeScreen';
 import Register from './screens/Register';
 import Profile from './screens/profile';
 import MobileApp from './screens/MobileApp';
+import PythonOOP from './screens/Python';
  
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="UserPage" component={Profile} />
         <Stack.Screen name="Mobile App" component={MobileApp}/>
+        <Stack.Screen name="Python OOP" component={PythonOOP}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -3,13 +3,13 @@ import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-nati
 import { WebView } from 'react-native-webview';
 import { Linking } from 'react-native';
 
-const MobileApp = () => {
-  const videoUrl = 'https://www.youtube.com/watch?v=f1f3d2gVadU&list=PLsO_V9s8C6fqtib6olJE4F-MvTW-hNWa6';
+const PythonOOP = () => {
+  const videoUrl = 'https://youtu.be/Ej_02ICOIgs?si=kGyVTyQ5v_y9xEXi';
 
   const chapters = [
-    { title: 'Chapter One♠', content: 'Introduction to Mobile App Development' },
-    { title: 'Chapter Two♠', content: 'Building User Interfaces with React Native' },
-    { title: 'Chapter Three♠', content: 'State Management in React Native' },
+    { title: 'Chapter One♠', content: 'Introduction to  Python OOP Development' },
+    { title: 'Chapter Two♠', content: 'CLASS Variables' },
+    { title: 'Chapter Three♠', content: 'Class and Static Method' },
     // Add more chapters as needed
   ];
 
@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MobileApp;
+export default PythonOOP;
